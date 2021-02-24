@@ -69,6 +69,7 @@ namespace ServiceStack.Auth
             {
                 this.Scopes = new[] {
                     "User.Read",
+                    ".default",
                 };
             }
 
