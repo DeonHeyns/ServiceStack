@@ -836,7 +836,7 @@ namespace ServiceStack
                     try
                     {
                         quotedTable = dialect.GetQuotedTableName(table, schema);
-                        to.Columns = db.GetTableColumns($"SELECT * FROM {quotedTable}");
+                        to.Columns = db.GetTableColumns($"SELECT * FROM {quotedTable} {dialect.SqlLimit(0, 1)}");
                     }
                     catch (Exception e)
                     {
